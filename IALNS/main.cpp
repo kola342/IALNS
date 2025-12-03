@@ -70,9 +70,6 @@ int main()
 		}
 		if (seg >= SEG) {
 			updateWeight();	//更新算子的得分
-			points_i = vector<vector<double>>(kWeightInsertion.size(), vector<double>(2, 0));
-			points_n = vector<vector<double>>(kWeightNoise.size(), vector<double>(2, 0));
-			points_r = vector<vector<double>>(kWeightRemoval.size(), vector<double>(2, 0));
 			seg = 0;
 			//s_new.output_weight('r');
 		}

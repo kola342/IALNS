@@ -64,16 +64,22 @@ void updateWeight() {
 	for (size_t i = 0; i < kWeightInsertion.size(); i++) {
 		if (points_i[i][1] != 0) {
 			kWeightInsertion[i] = kWeightInsertion[i] * (1 - R) + R * points_i[i][0] / points_i[i][1];
+			points_i[i][0] = 0;
+			points_i[i][1] = 0;
 		}
 	}
 	for (size_t i = 0; i < kWeightNoise.size(); i++) {
 		if (points_n[i][1] != 0) {			
 			kWeightNoise[i] = kWeightNoise[i] * (1 - R) + R * points_n[i][0] / points_n[i][1];
+			points_n[i][0] = 0; 
+			points_n[i][1] = 0;
 		}
 	}
 	for (size_t i = 0; i < kWeightRemoval.size(); i++) {
 		if (points_r[i][1] != 0) {
 			kWeightRemoval[i] = kWeightRemoval[i] * (1 - R) + R * points_r[i][0] / points_r[i][1];
+			points_r[i][0] = 0;
+			points_r[i][1] = 0;
 		}
 	}
 }
